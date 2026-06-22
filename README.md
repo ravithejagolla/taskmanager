@@ -8,6 +8,9 @@ This project includes two separate applications:
 
 - `Backend` — Node.js + Express + MongoDB API
 - `Frontend/taskmanager` — React + Vite client interface
+## Deployed Link
+- Frontend : https://mangertask-app.netlify.app/
+- Backend : https://taskmanager-iz3x.onrender.com
 
 The app supports:
 
