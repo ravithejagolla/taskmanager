@@ -22,7 +22,8 @@ This React frontend is part of the Task Manager fullstack application. It provid
    npm run dev
    ```
 
-The frontend is configured to proxy requests to the backend on `http://localhost:5000`.
+The frontend reads the backend origin from the environment variable `VITE_API_BASE`.
+If this variable is not set, it defaults to `http://localhost:5000`.
 
 ## Build
 
@@ -44,7 +45,8 @@ npm run preview
 
 ## Backend requirement
 
-The frontend expects the backend API to be available at `http://localhost:5000/api/task`.
+The frontend expects the backend origin to be available at the address configured in `VITE_API_BASE`.
+By default this is `http://localhost:5000`, and the frontend will call `/api/task` on that origin.
 
 Start the backend from the `Backend` folder with:
 ```bash

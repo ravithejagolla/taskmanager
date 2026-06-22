@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react'
 import './App.css'
 
-const API_BASE = 'http://localhost:5000/api/task'
+const API_ORIGIN = import.meta.env.VITE_API_BASE || 'http://localhost:5000'
+const API_BASE = `${API_ORIGIN.replace(/\/+$/, '')}/api/task`
 
 function App() {
   const [tasks, setTasks] = useState([])
